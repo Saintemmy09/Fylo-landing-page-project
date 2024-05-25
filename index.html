@@ -1,122 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+   <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  -->
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Fylo landing page with two column layout</title>
 
-    <title>Frontend Mentor | Fylo landing page with two column layout</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+ 
+<header>
+  <nav class="nav_links">
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <link rel="stylesheet" href="./styles.css">
-   
-  </head>
-  <body>
-    <main>
-      <section>
-        <header>
-          <img src="./images/logo.svg" alt="" />
-          <div class="right_container">
-            <a href="#">Features</a>
-            <a href="#">Team</a>
-            <a href="#">Sign in</a>
-          </div>
-        </header>
-      </section>
+    <img src="./images/logo.svg" alt="logo">
+    <div>
+      <ul class="nav_links_right">
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Sign in</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
-      <section class="section_two">
-        <div class="Hero">
-          <h1>All your files in one secure location, accessible anyway.</h1>
-          <p>
-            Fylos stores your most important files in one secure location.
-            Access them wherever you need, share and collaborate with friends,
-            families and co-workers.
-          </p>
-          <input type="text"  placeholder="Enter your email..." class="input_text" />
-          <button>Get Started</button>
-        </div>
 
-        
-          <img src="./images/illustration-1.svg" class="illustrate" />
-        
-      </section>
 
-      <section class="section_three">
-        <h2>Stay productive, wherever you are</h2>
-        <p>
-          Never let location be an issue when accessing your files. Fylo has you
-          covered for all of your file storage needs.
-        </p>
-        <p>
-          Securely share files and folders with friends, family and colleagues
-          for live collaboration. No attachments required!
-        </p>
 
-        <div>
-          <img src="./images/illustration-2.svg" class="illustrate_two" />
-        </div>
-      </section>
-    </main>
+ <section class="hero-section">
+ <div class="hero-text">
+   <h1> All your files in one secure location, accessible anywhere.</h1>
+   <p>Fylo stores your most important files in one secure location. 
+    Access them wherever you need, share and collaborate with friends, 
+    family, and co-workers.</p>
+    
+    <div class="hero_activate">
+    <form action="#"> 
+      <div class="positioning">
+        <input type="text" spellcheck="false"  id="emailField"  placeholder="Enter your Email..." onkeyup="validateEmail()" >
+        <span id="emailError"></span>
+     </div>
+      <input id="submit_btn" type="submit" value="Get Started">
+     
+    </form> 
+    
+    </div>
+ </div>
+<div  class="hero_right">
+  <img class="hero_right_image" src="./images/illustration-1.svg" alt="">
+  </div>
+</section>
 
-    <!--Features
-  Team
-  Sign In
 
-  All your files in one secure location, accessible anywhere.
-
-  Fylo stores your most important files in one secure location. 
-  Access them wherever you need, share and collaborate with friends, 
-  family, and co-workers.
-
-  Get Started
-
-  Stay productive, wherever you are
-
-  Never let location be an issue when accessing your files. Fylo has you 
-  covered for all of your file storage needs.
-
-  Securely share files and folders with friends, family and colleagues for 
-  live collaboration. No email attachments required!
-
-  See how Fylo works
-
-  Fylo has improved our team productivity by an order of magnitude. Since 
-  making the switch our team has become a well-oiled collaboration machine.
-
-  Kyle Burton
-  Founder & CEO, Huddle
-
-  Get early access today
-
-  It only takes a minute to sign up and our free starter tier is extremely generous. 
-  If you have any questions, our support team would be happy to help you.
-
-  Get Started For Free
-
-  Phone: +1-543-123-4567
-  example@fylo.com
-
-  About Us
-  Jobs
-  Press
-  Blog
-
-  Contact Us
-  Terms
-  Privacy --->
-
-    <!-----<footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+<div class="inner_bg">
+ <section class="second_hero">
+  <div class="left_container">
+    <h1>Stay productive, wherever you are</h1>
+    <p>Never let location be an issue when accessing your files. Fylo has you
+      covered for all of your file storage needs.
+    <p>
+    <p>
+      Securely share files and folders with friends, family and colleagues for 
+      live collaboration. No email attachments required!
     </p>
-  </footer>--->
-  </body>
+      <div class="fylo_workings">
+        <button>See how Fylo works </button>
+        <img src="./images/icon-arrow.svg" alt="arrow-icon">
+     </div>
+   
+    <div class="testimonial">
+      <img src="./images/icon-quotes.svg" alt="">
+      <p >Fylo has improved our team productivity by an order of magnitude. Since 
+      making the switch our team has become a well-oiled collaboration machine.</p>
+      <div class="testimonial-avatar">
+        <img src="./images/avatar-testimonial.jpg" alt="">
+        <div class="testimonial_text">
+          <h4>Kyle Burton</h4>
+          <p>Founder & CEO, Huddle</p>
+       </div>
+     </div>
+    </div>
+  </div>
+  <div class="right_container_div">
+    <img class="right_container" src="./images/illustration-2.svg" alt="illustration 2">
+  </div>
+</section>
+</div>
+
+
+<div class="third_hero" >
+<section class="access_container">
+  <div class="third_hero_right">
+   <h2> Get early access today</h2>
+   <p>It only takes a minute to sign up and our free starter tier is extremely generous. 
+    If you have any questions, our support team would be happy to help you.</p>
+  </div>
+  <div class="third_hero_right_action">
+    <form action="#">
+      <input type="text" spellcheck="false"  id="emailField2"  placeholder="Enter your Email..." onkeyup="validateEmail2()" >
+      <span id="emailError2"></span>
+      <input id="submit_btn2" type="submit" value="Get Started for free">
+      
+    </form>
+
+      
+      </div>
+  </div>
+</section>
+</div>
+
+
+
+<div class="footer">
+<footer>
+    <img class="footer-image" width="15%" height="50%" src="./images/logo.svg" alt="footerlogo">
+    
+    <div class="footer-links">
+        <div class="Contact-footer">
+          <div class="phone">
+              <img width="16px" height="16px" src="./images/icon-phone.svg" alt="phoneicon">
+              <p class="phonep">Phone: +1-543-123-4567</p>
+          </div>
+          <div class="email">
+              <img width="16px" height="16px" src="./images/icon-email.svg" alt="emailicon">
+              <p class="">example@fylo.com</p>
+          </div>
+        </div>
+
+
+        <div class="First-set-of-links">
+          <ul>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Jobs</a></li>
+            <li><a href="">Press</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="second-set-of-links">
+          <ul>
+            <li><a href="">Contact Us</a></li>
+            <li><a href="">Terms</a></li>
+            <li><a href="">Privacy</a></li>
+          </ul>
+        </div >
+
+
+  </div>
+  
+</footer>
+</div>
+
+
+
+  <script>
+
+    var emailError= document.getElementById("emailError");
+    var emailField= document.getElementById("emailField");
+    var emailError2= document.getElementById("emailError2");
+    var emailField2= document.getElementById("emailField2");
+
+    function validateEmail(){
+      var emailError= document.getElementById("emailError");
+    var emailField= document.getElementById("emailField");
+      if(!emailField.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+
+          emailError.innerHTML = "Please check your email";
+          emailField.style.borderColor = "red";
+         
+          return false;
+        }
+          emailError.innerHTML = "";
+          return true;
+    }
+
+    function validateEmail2(){
+      var emailError= document.getElementById("emailError2");
+    var emailField= document.getElementById("emailField2");
+      if(!emailField2.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+
+          emailError2.innerHTML = "Please check your email";
+          emailField2.style.borderColor = "red";
+          return false;
+        }
+          emailError2.innerHTML = "";
+          return true;
+    }
+
+
+  </script>
+</body>
 </html>
